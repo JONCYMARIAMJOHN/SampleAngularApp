@@ -1,0 +1,10 @@
+<div class="card">
+    <div class="card-header">
+      <strong>History</strong>
+    </div>
+    <div class="card-body">
+      <blockquote class="blockquote mb-0" *ngFor="let _value of list.reverse()">
+        <a class="btn" (click)="onHistoryCheck(_value.place, _value.flag)" [ngStyle]="{'color' : _value.flag === false  ? '#FF0000' : '#0000FF' }">{{_value.place}}</a>
+      </blockquote>
+    </div>
+  </div>

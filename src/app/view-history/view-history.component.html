@@ -1,0 +1,39 @@
+
+<div class="col-md-12">
+    <h1>{{place}}</h1>
+  </div>
+  <br>
+  <div class="row">
+      <div class="col-md-3 mt-3 con" *ngFor="let _weather of weatherDetails">
+        <div class="card" >
+          <div class="card-body" >
+            
+            <h5 class="card-title">{{_weather.exactdate}}</h5>
+            <h6 class="card-subtitle mb-2 text-muted">{{_weather.place}}</h6>
+            <div class="card-text">
+                <strong>Temperature</strong>
+                <div>
+                  <table>
+                    <tr>
+                      <td>Day</td>
+                      <td>:</td>
+                      <td></td>
+                      <td>{{_weather.temperature.day}} <sup> o</sup>C</td>
+                    </tr>
+                    <tr>
+                      <td>Minimum</td>
+                      <td>:</td>
+                      <td></td>
+                      <td>{{_weather.temperature.min}} <sup> o</sup>C</td>
+                    </tr>
+                  </table>
+                </div>
+                <br>
+                <button class="btn btn-primary" (click)="onViewMore(_weather)">View More ...</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  

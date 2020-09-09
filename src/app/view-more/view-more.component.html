@@ -1,0 +1,27 @@
+
+  <div class="modal-header">
+    <h4 class="modal-title pull-left">{{title}}</h4>
+    <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
+      <span aria-hidden="true">&times;</span>
+    </button>
+</div>
+<div class="modal-body">
+  
+  <table>
+      <tr><b>Temperature</b></tr>
+    <tr><td>Day</td><td>:</td><td></td><td>{{weather.temperature.day}}<sup> o</sup>C</td></tr>
+    <tr><td>Minimum</td><td>:</td><td></td><td>{{weather.temperature.min}}<sup> o</sup>C</td></tr>
+    <tr><td>Maximum</td><td>:</td><td></td><td>{{weather.temperature.max}}<sup> o</sup>C</td></tr>
+    <tr><td>Night</td><td>:</td><td></td><td>{{weather.temperature.night}}<sup> o</sup>C</td></tr>
+    <tr><td>Evening</td><td>:</td><td></td><td>{{weather.temperature.eve}}<sup> o</sup>C</td></tr>
+    <tr><td>Morning</td><td>:</td><td></td><td>{{weather.temperature.morn}}<sup> o</sup>C</td></tr>
+    <tr></tr>
+    <tr><td><b>Pressure</b></td><td>:</td><td></td><td>{{weather.pressure}} P</td></tr>
+    <tr><td><b>Humidity</b></td><td>:</td><td></td><td>{{weather.humidity}} gm/m<sup>3</sup></td></tr>
+    <tr><td><b>Weather</b></td><td>:</td><td></td><td>{{weather.weather}}</td></tr>
+    <tr><td><b>Description</b></td><td>:</td><td></td><td>{{weather.description}}</td></tr>
+  </table>
+</div>
+<div class="modal-footer">
+  <button type="button" class="btn btn-primary" (click)="modalRef.hide()">Close</button>
+</div>

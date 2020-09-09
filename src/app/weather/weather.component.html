@@ -1,0 +1,38 @@
+<div *ngIf="weather">  
+  <h1>{{weather[0].place}}</h1>
+  <kendo-grid [data]="weather" [height]="400">
+      
+      <kendo-grid-column field="exactdate" title="Date" width="100">
+          <ng-template kendoGridHeaderTemplate let-column>
+            <b>{{column.title}}</b>
+          </ng-template>
+      </kendo-grid-column>
+      <kendo-grid-column field="weather" title="Weather" width="100">
+          <ng-template kendoGridHeaderTemplate let-column>
+            <b>{{column.title}}</b>
+          </ng-template>
+      </kendo-grid-column>
+      <kendo-grid-column field="description" title="Description" width="100">
+          <ng-template kendoGridHeaderTemplate let-column>
+            <b>{{column.title}}</b>
+          </ng-template>
+      </kendo-grid-column>
+      <kendo-grid-column field="humidity" title="Humidity (g/cu.m)" width="100">
+          <ng-template kendoGridHeaderTemplate let-column>
+            <b>{{column.title}}</b>
+          </ng-template>
+      </kendo-grid-column>
+      <kendo-grid-column field="pressure" title="Pressure" width="100">
+          <ng-template kendoGridHeaderTemplate let-column>
+            <b>{{column.title}}</b>
+          </ng-template>
+      </kendo-grid-column>
+
+
+      <kendo-grid-command-column title="" width="100">
+          <ng-template kendoGridCellTemplate let-row>
+              <button class="btn btn-primary" (click)="onViewMore(row)">View More</button>
+          </ng-template>
+      </kendo-grid-command-column>
+  </kendo-grid>
+</div>
